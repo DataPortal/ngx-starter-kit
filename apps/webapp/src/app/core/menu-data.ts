@@ -32,6 +32,20 @@ export const defaultMenu: MenuItem[] = [
       }
     ]
   },
+  /* dashboard/vehicles defined in libs/dashboard/src/lib/dashboard.module.ts */
+  {
+    name: 'Grid Map',
+    icon: 'insert_chart',
+    disabled: false,
+    children: [
+      {
+        name: 'Vehicles Grid List',
+        icon: 'grid_on',
+        linkX: '/dashboard/vehicles',
+        link: '/dashboard/gridmap/grid-list'
+      }
+    ]
+  },
   {
     name: 'Experiments',
     icon: 'pie_chart_outlined',
