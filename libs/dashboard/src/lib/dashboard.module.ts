@@ -43,6 +43,11 @@ import { SidenavModule } from '@ngx-starter-kit/sidenav';
             data: { animation: 'grid' }
           },
           {
+            path: 'gridmap',
+            loadChildren: '@ngx-starter-kit/gridmap#GridMapModule',
+            data: { animation: 'grid' }
+          },
+          {
             path: 'experiments',
             loadChildren: '@ngx-starter-kit/experiments#ExperimentsModule',
             data: { animation: 'experiments' }
