@@ -1,0 +1,87 @@
+<ngx-breadcrumbs title="Grid" [crumbs]="crumbs"></ngx-breadcrumbs>
+
+<mat-card class="mat-elevation-z8">
+  <mat-toolbar>
+    <!--<div>Vehicles | </div> -->
+    <mat-form-field fxFlex>
+      <input matInput #filter (keyup)="applyFilter($event.target.value)">
+      <mat-placeholder>
+        <mat-icon>search</mat-icon>
+        Filter
+      </mat-placeholder>
+    </mat-form-field>
+    <mat-button-toggle-group #gridView="matButtonToggleGroup" style="margin-left: 16px">
+      <mat-button-toggle value='list'>
+        <mat-icon>view_list</mat-icon>
+      </mat-button-toggle>
+      <mat-button-toggle value='grid' checked>
+        <mat-icon>view_comfy</mat-icon>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </mat-toolbar>
+
+  <ng-container *ngIf="gridView.value === 'grid'; then grid; else list">
+  </ng-container>
+
+  <mat-paginator #paginator [pageSize]="6" [pageSizeOptions]="[6, 9, 12, 18]"
+                 [showFirstLastButtons]="true"></mat-paginator>
+</mat-card>
+
+<ng-template #grid>
+  <mat-grid-list cols="3" rowHeight="250px" gutterSize="10px" class="fix-height">
+    <mat-grid-tile *ngFor="let vehicle of renderData | async">
+
+      <!--<mat-card (click)="onClick(vehicle)" [class.active]="selection.isSelected(vehicle)">-->
+      <!--<mat-card-header>-->
+      <!--<img mat-card-avatar src="https://source.unsplash.com/random/200x200">-->
+      <!--<mat-card-title>{{ vehicle.first_name }}</mat-card-title>-->
+      <!--<mat-card-subtitle>{{ vehicle.last_name }}</mat-card-subtitle>-->
+      <!--</mat-card-header>-->
+      <!--&lt;!&ndash;<img mat-card-image src="https://source.unsplash.com/random/800x600">&ndash;&gt;-->
+      <!--&lt;!&ndash;<mat-card-content>&ndash;&gt;-->
+      <!--&lt;!&ndash;<p>Something pretty ... </p>&ndash;&gt;-->
+      <!--&lt;!&ndash;</mat-card-content>&ndash;&gt;-->
+      <!--</mat-card>-->
+      <mat-card (click)="onClick(vehicle)" [class.active]="selection.isSelected(vehicle)">
+        <mat-card-header>
+          <!--<img mat-card-avatar src="https://source.unsplash.com/random/200x200">-->
+          <img mat-card-avatar src="{{vehicle.picture.thumbnail}}">
+          <mat-card-title>{{ vehicle.name.title }} {{ vehicle.name.first }} {{ vehicle.name.last }}</mat-card-title>
+          <mat-card-subtitle> {{ vehicle.email }}</mat-card-subtitle>
+        </mat-card-header>
+        <!--<img mat-card-image src="{{vehicle.picture.medium}}">-->
+        <mat-card-content>
+          Address: {{vehicle.location.street}}, {{vehicle.location.city}}, {{vehicle.location.state}}
+          {{vehicle.location.zip}}<br>
+          Date of Birth: {{vehicle.dob | amCalendar}}<br>
+          email: {{vehicle.email}}<br>
+          phone: {{vehicle.phone}}, cell: {{vehicle.cell}}<br>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+
+    </mat-grid-tile>
+  </mat-grid-list>
+</ng-template>
+
+<ng-template #list>
+  <mat-list class="fix-height">
+    <ng-container *ngFor="let vehicles of renderData | async | groupBy:'gender'">
+      <h3 mat-subheader>{{vehicles.key}}</h3>
+      <mat-list-item *ngFor="let vehicle of vehicles.value; let last = last" (click)="onClick(vehicle)"
+                     [class.active]="selection.isSelected(vehicle)">
+        <mat-icon matListIcon>{{ vehicle.gender == 'male' ? 'person' : 'face'}}</mat-icon>
+        <!--<img mat-list-avatar src="https://source.unsplash.com/random/200x200">-->
+        <img mat-card-avatar src="{{vehicle.picture.thumbnail}}">
+        <h3 matLine> {{vehicle.name.first}} {{vehicle.name.last}} </h3>
+        <p matLine><span> {{vehicle.email}} </span><span class="subline">-- {{vehicle.phone}} </span></p>
+        <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    </ng-container>
+  </mat-list>
+</ng-template>
+
