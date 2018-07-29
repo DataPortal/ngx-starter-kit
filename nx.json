@@ -170,6 +170,11 @@
         "child-module"
       ]
     },
+    "gridmap": {
+      "tags": [
+        "child-module"
+      ]
+    },
     "notifications": {
       "tags": [
         "public-module"
