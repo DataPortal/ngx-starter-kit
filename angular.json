@@ -1229,6 +1229,34 @@
         }
       }
     },
+    "gridmap": {
+      "root": "libs/gridmap",
+      "sourceRoot": "libs/gridmap/src",
+      "projectType": "library",
+      "prefix": "ngx",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/gridmap/src/test.ts",
+            "tsConfig": "libs/gridmap/tsconfig.spec.json",
+            "karmaConfig": "libs/gridmap/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/gridmap/tsconfig.lib.json",
+              "libs/gridmap/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
     "notifications": {
       "root": "libs/notifications",
       "sourceRoot": "libs/notifications/src",
