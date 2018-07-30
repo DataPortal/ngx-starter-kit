@@ -115,6 +115,12 @@
       "@ngx-starter-kit/grid": [
         "libs/grid/src/index.ts"
       ],
+      "gridmap/*": [
+        "dist/gridmap/*"
+      ],
+      "@ngx-starter-kit/gridmap": [
+        "libs/gridmap/src/index.ts"
+      ],
       "notifications/*": [
         "dist/notifications/*"
       ],
