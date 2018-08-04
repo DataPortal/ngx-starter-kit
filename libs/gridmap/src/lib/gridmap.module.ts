@@ -7,7 +7,8 @@ import { NgxPipesModule } from '@ngx-starter-kit/ngx-pipes';
 import { VehiclesGridListComponent } from './containers/vehicles-grid-list/vehicles-grid-list.component';
 import { VehiclesTableComponent } from './containers/vehicles-table/vehicles-table.component';
 import { VehicleService } from './services/vehicle.service';
-import { RandomVehicleService } from './services/random-account.service';
+//import { RandomVehicleService } from './services/random-account.service';
+import { RandomVehicleService } from './services/coord-bikeshare.service';
 import { VehicleDetailComponent } from './components/vehicle-detail/vehicle-detail.component';
 import { VehicleEditComponent } from './components/vehicle-edit/vehicle-edit.component';
 

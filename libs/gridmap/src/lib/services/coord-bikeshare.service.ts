@@ -1,9 +1,11 @@
+// Based on grid/src/lib/services/random-account.service.ts
+
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 
 export interface ResponseObject {
-  features?: (CoordBikeshare)[] | null;
+  features?: (RandomVehicle)[] | null;
   info: Info;
 }
 
@@ -14,7 +16,7 @@ export interface Info {
   version: string;
 }
 
-export interface CoordBikeshare {
+export interface RandomVehicle {
   gender: string;
   name: Name;
   location: Location;
@@ -55,7 +57,7 @@ export interface Picture {
 //   providedIn: 'root'
 // })
 @Injectable()
-export class CoordBikeshareService  {
+export class RandomVehicleService  {
 
   public baseUrl = 'https://api.coord.co/v1/bike/location/';
 

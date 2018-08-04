@@ -5,7 +5,8 @@ import { List } from 'immutable';
 import { MatButtonToggleGroup, MatPaginator, MatSort, MatTableDataSource, PageEvent } from '@angular/material';
 import { SelectionModel } from '@angular/cdk/collections';
 
-import { RandomVehicle, RandomVehicleService } from '../../services/random-account.service';
+//import { RandomVehicle, RandomVehicleService } from '../../services/random-account.service';
+import { RandomVehicle, RandomVehicleService } from '../../services/coord-bikeshare.service';
 
 @Component({
   selector: 'ngx-vehicles-grid-list',
@@ -18,7 +19,7 @@ export class VehiclesGridListComponent implements OnInit, OnDestroy {
 
   crumbs = List([
     { name: 'Dashboard', link: '/dashboard' },
-    { name: 'Grid', link: '/dashboard/vehicles' },
+    { name: 'Grid', link: '/dashboard/gridmap/grid-list' },
     { name: 'Bike Share' }
   ]);
 

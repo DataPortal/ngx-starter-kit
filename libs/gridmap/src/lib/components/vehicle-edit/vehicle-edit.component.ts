@@ -3,7 +3,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { FormBuilder, Validators } from '@angular/forms';
 import { map, startWith } from 'rxjs/operators';
 
-import { Vehicle, Gender } from '../../models/vehicle.model';
+import { Vehicle } from '../../models/vehicle.model';
 import { states } from './states';
 import { Observable } from 'rxjs';
 import { EntityFormComponent } from '@ngx-starter-kit/shared';
@@ -15,7 +15,6 @@ import * as moment from 'moment';
   styleUrls: ['./vehicle-edit.component.scss']
 })
 export class VehicleEditComponent extends EntityFormComponent<Vehicle> {
-  readonly genderOptions = Object.keys(Gender);
   readonly states: string[] = states;
   filteredStates: Observable<string[]>;
 
@@ -52,9 +51,12 @@ export class VehicleEditComponent extends EntityFormComponent<Vehicle> {
     // this.entityForm = this.fb.group(item);
     this.entityForm = this.fb.group(
       {
+        name: [item.properties.name || '', Validators.required],
+        type: [item.type || '', Validators.required]
+
+        /*
         first_name: [item.first_name || '', Validators.required],
         last_name: [item.last_name || '', Validators.required],
-        gender: [item.gender || '', Validators.required],
         dob: [item.dob, Validators.required],
         email: [item.email || '', [Validators.required, Validators.email]],
         phone: [
@@ -68,6 +70,7 @@ export class VehicleEditComponent extends EntityFormComponent<Vehicle> {
           state: [item.address.state || '', Validators.required],
           zip: [item.address.zip || '', Validators.required]
         })
+        */
       },
       { updateOn: 'blur' }
     );

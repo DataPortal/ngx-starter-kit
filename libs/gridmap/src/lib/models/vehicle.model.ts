@@ -1,88 +1,30 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { map } from 'rxjs/operators';
+// Based on grid/src/lib/models/vehicle.mobel.ts
 
-export interface ResponseObject {
-  features?: (CoordBikeshare)[] | null;
-  info: Info;
+import { Entity } from '@ngx-starter-kit/shared';
+import * as moment from 'moment';
+
+export class Vehicle extends Entity {
+  public id = 0;
+  public first_name?: string;
+  public last_name?: string;
+  public gender?: Gender;
+  public dob?: moment.Moment;
+  public email?: string;
+  public phone?: string;
+  public company?: string;
+  public address?: Address;
 }
 
-export interface Info {
-  seed: string;
-  results: number;
-  page: number;
-  version: string;
+export class Address {
+  constructor(
+    public street?: string,
+    public city?: string,
+    public state?: string,
+    public zip?: string
+  ) {}
 }
 
-export interface CoordBikeshare {
-  gender: string;
-  name: Name;
-  location: Location;
-  email: string;
-  dob: string;
-  phone: string;
-  cell: string;
-  id: Id;
-  picture: Picture;
-  nat: string;
-}
-
-export interface Name {
-  title: string;
-  first: string;
-  last: string;
-}
-
-export interface Location {
-  street: string;
-  city: string;
-  state: string;
-  postcode: number;
-}
-
-export interface Id {
-  name: string;
-  value: string;
-}
-
-export interface Picture {
-  large: string;
-  medium: string;
-  thumbnail: string;
-}
-
-// @Injectable({
-//   providedIn: 'root'
-// })
-@Injectable()
-export class CoordBikeshareService  {
-
-  public baseUrl = 'https://api.coord.co/v1/bike/location/';
-
-  //https://api.coord.co/v1/bike/location?access_key=p9H_wRiQaoEoIKQBaJnA1oR77yCBY-6Z-AEku8bgJNk&latitude=33.7490&longitude=-84.3880&radius_km=10
-
-  params = new HttpParams()
-    .append('access_key', 'p9H_wRiQaoEoIKQBaJnA1oR77yCBY-6Z-AEku8bgJNk')
-    .append('latitude', '33.7490')
-    .append('longitude', '-84.3880')
-    .append('radius_km', '10');
-
-  constructor(private httpClient: HttpClient) {
-  }
-
-  getAll(pageSize : number = 100) {
-    const params = this.params.append('features', ''+ pageSize);
-    return this.httpClient.get<ResponseObject>(this.baseUrl, { params }).pipe(
-      map((response: ResponseObject) => response.features)
-    )
-  }
-
-  getById(id: string) {
-      const params = this.params
-        .append('id', id)
-        .append('features', '1');
-    return this.httpClient.get<ResponseObject>(this.baseUrl, { params }).pipe(
-      map((response: ResponseObject) => response.features[0])
-    )
-  }
+export enum Gender {
+  male = 'make',
+  female = 'female'
 }
