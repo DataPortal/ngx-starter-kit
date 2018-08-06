@@ -44,18 +44,11 @@
       <!--</mat-card>-->
       <mat-card (click)="onClick(vehicle)" [class.active]="selection.isSelected(vehicle)">
         <mat-card-header>
-          <!--<img mat-card-avatar src="https://source.unsplash.com/random/200x200">-->
-          <img mat-card-avatar src="{{vehicle.picture.thumbnail}}">
-          <mat-card-title>{{ vehicle.name.title }} {{ vehicle.name.first }} {{ vehicle.name.last }}</mat-card-title>
-          <mat-card-subtitle> {{ vehicle.email }}</mat-card-subtitle>
+            Vehicle card-header
         </mat-card-header>
         <!--<img mat-card-image src="{{vehicle.picture.medium}}">-->
         <mat-card-content>
-          Address: {{vehicle.location.street}}, {{vehicle.location.city}}, {{vehicle.location.state}}
-          {{vehicle.location.zip}}<br>
-          Date of Birth: {{vehicle.dob | amCalendar}}<br>
-          email: {{vehicle.email}}<br>
-          phone: {{vehicle.phone}}, cell: {{vehicle.cell}}<br>
+          Vehicle card-header
         </mat-card-content>
         <mat-card-actions>
           <button mat-button>LIKE</button>
@@ -74,10 +67,10 @@
       <mat-list-item *ngFor="let vehicle of vehicles.value; let last = last" (click)="onClick(vehicle)"
                      [class.active]="selection.isSelected(vehicle)">
         <mat-icon matListIcon>{{ vehicle.gender == 'male' ? 'person' : 'face'}}</mat-icon>
-        <!--<img mat-list-avatar src="https://source.unsplash.com/random/200x200">-->
-        <img mat-card-avatar src="{{vehicle.picture.thumbnail}}">
-        <h3 matLine> {{vehicle.name.first}} {{vehicle.name.last}} </h3>
-        <p matLine><span> {{vehicle.email}} </span><span class="subline">-- {{vehicle.phone}} </span></p>
+        Grid List Test
+        
+        <p matLine><span></span><span class="subline">-- </span></p>
+        
         <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
       </mat-list-item>
       <mat-divider></mat-divider>
