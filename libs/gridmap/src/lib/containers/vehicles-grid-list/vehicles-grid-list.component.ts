@@ -19,8 +19,8 @@ export class VehiclesGridListComponent implements OnInit, OnDestroy {
 
   crumbs = List([
     { name: 'Dashboard', link: '/dashboard' },
-    { name: 'Grid', link: '/dashboard/gridmap/grid-list' },
-    { name: 'Bike Share' }
+    { name: 'Mobility', link: '/dashboard/gridmap/grid-list' },
+    { name: 'Available Vehicles' }
   ]);
 
   vehicleDataSource: MatTableDataSource<Partial<RandomVehicle>>;

@@ -7,7 +7,7 @@
       <input matInput #filter (keyup)="applyFilter($event.target.value)">
       <mat-placeholder>
         <mat-icon>search</mat-icon>
-        Filter
+        Filter ID<!-- To do: Add name search also. -->
       </mat-placeholder>
     </mat-form-field>
     <mat-button-toggle-group #gridView="matButtonToggleGroup" style="margin-left: 16px">
@@ -31,17 +31,6 @@
   <mat-grid-list cols="3" rowHeight="250px" gutterSize="10px" class="fix-height">
     <mat-grid-tile *ngFor="let vehicle of renderData | async">
 
-      <!--<mat-card (click)="onClick(vehicle)" [class.active]="selection.isSelected(vehicle)">-->
-      <!--<mat-card-header>-->
-      <!--<img mat-card-avatar src="https://source.unsplash.com/random/200x200">-->
-      <!--<mat-card-title>{{ vehicle.first_name }}</mat-card-title>-->
-      <!--<mat-card-subtitle>{{ vehicle.last_name }}</mat-card-subtitle>-->
-      <!--</mat-card-header>-->
-      <!--&lt;!&ndash;<img mat-card-image src="https://source.unsplash.com/random/800x600">&ndash;&gt;-->
-      <!--&lt;!&ndash;<mat-card-content>&ndash;&gt;-->
-      <!--&lt;!&ndash;<p>Something pretty ... </p>&ndash;&gt;-->
-      <!--&lt;!&ndash;</mat-card-content>&ndash;&gt;-->
-      <!--</mat-card>-->
       <mat-card (click)="onClick(vehicle)" [class.active]="selection.isSelected(vehicle)">
         <mat-card-header>
             <mat-card-title>{{ vehicle.properties.name }}</mat-card-title>
@@ -60,7 +49,8 @@
           
           Region: {{vehicle.properties.region_id}} {{vehicle.properties.location_type}}<br>
           System: {{vehicle.properties.system_id}}<br>
-          
+          ID: {{vehicle.id}}<br>
+
         </mat-card-content>
         <mat-card-actions>
           <button mat-button>LIKE</button>
@@ -75,13 +65,18 @@
 <ng-template #list>
   <mat-list class="fix-height">
     <ng-container *ngFor="let vehicles of renderData | async | groupBy:'gender'">
-      <h3 mat-subheader>{{vehicles.key}}</h3>
-      <mat-list-item *ngFor="let vehicle of vehicles.value; let last = last" (click)="onClick(vehicle)"
-                     [class.active]="selection.isSelected(vehicle)">
+      <h3 mat-subheader>Coord.co API Feed</h3>
+      <mat-list-item *ngFor="let vehicle of vehicles.value; let last = last" (click)="onClick(vehicle)" [class.active]="selection.isSelected(vehicle)">
         <mat-icon matListIcon>{{ vehicle.gender == 'male' ? 'person' : 'face'}}</mat-icon>
-        Grid List Test
         
-        <p matLine><span></span><span class="subline">-- </span></p>
+        <span style="white-space: nowrap">
+        Vehicles available: {{vehicle.properties.num_bikes_available}}<br>
+        Docks available: {{vehicle.properties.num_docks_available}}
+        </span>
+
+        <p matLine><span></span><span class="subline">{{ vehicle.properties.name }}</span><br>
+          <span>{{vehicle.id}}</span>
+        </p>
 
         <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
       </mat-list-item>
