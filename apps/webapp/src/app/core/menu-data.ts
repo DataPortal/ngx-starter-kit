@@ -32,14 +32,14 @@ export const defaultMenu: MenuItem[] = [
       }
     ]
   },
-  /* dashboard/vehicles defined in libs/dashboard/src/lib/dashboard.module.ts */
+  /* dashboard/gridmap/grid-list is defined in libs/dashboard/src/lib/dashboard.module.ts */
   {
-    name: 'Grid Map',
+    name: 'Mobility',
     icon: 'insert_chart',
     disabled: false,
     children: [
       {
-        name: 'Vehicles Grid List',
+        name: 'Available Vehicles',
         icon: 'grid_on',
         linkX: '/dashboard/vehicles',
         link: '/dashboard/gridmap/grid-list'
