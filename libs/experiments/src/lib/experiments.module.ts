@@ -3,8 +3,8 @@ import { RouterModule } from '@angular/router';
 import { FilePondModule, registerPlugin } from 'ngx-filepond';
 import { ScrollingModule } from '@angular/cdk-experimental/scrolling';
 
-import { SharedModule } from '@ngx-starter-kit/shared';
-import { ContextMenuModule } from '@ngx-starter-kit/context-menu';
+import { SharedModule } from '@coord-angular/shared';
+import { ContextMenuModule } from '@coord-angular/context-menu';
 import { AnimationsComponent } from './containers/animations/animations.component';
 import { FileUploadComponent } from './containers/file-upload/file-upload.component';
 import { HammertimeDirective } from './components/hammertime/hammertime.directive';

@@ -1,6 +1,6 @@
 // Based on grid/src/lib/models/vehicle.mobel.ts
 
-import { Entity } from '@ngx-starter-kit/shared';
+import { Entity } from '@coord-angular/shared';
 import * as moment from 'moment';
 
 export class Vehicle extends Entity {

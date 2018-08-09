@@ -16,8 +16,8 @@ import {
   MatToolbarModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { DraggableModule } from '@ngx-starter-kit/draggable';
-import { LedModule } from '@ngx-starter-kit/led';
+import { DraggableModule } from '@coord-angular/draggable';
+import { LedModule } from '@coord-angular/led';
 
 import { ChatBotService } from './chat-bot.service';
 import { ChatBotComponent } from './chat-bot.component';

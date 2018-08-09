@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MomentModule } from 'ngx-moment';
-import { MaterialModule } from '@ngx-starter-kit/material';
-import { MaterialDateModule } from '@ngx-starter-kit/material';
-import { BreadcrumbsModule } from '@ngx-starter-kit/breadcrumbs';
+import { MaterialModule } from '@coord-angular/material';
+import { MaterialDateModule } from '@coord-angular/material';
+import { BreadcrumbsModule } from '@coord-angular/breadcrumbs';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule, LAYOUT_CONFIG } from '@angular/flex-layout';
 import { MinValidatorDirective } from './directives/min/min.directive';

@@ -16,7 +16,7 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@ngx-starter-kit/*": [
+      "@coord-angular/*": [
         "libs/*"
       ],
       "@default/*": [
@@ -25,106 +25,106 @@
       "@env/*": [
         "apps/webapp/src/environments/*"
       ],
-      "@ngx-starter-kit/navigator": [
+      "@coord-angular/navigator": [
         "libs/navigator/src/index.ts"
       ],
-      "@ngx-starter-kit/socketio-plugin": [
+      "@coord-angular/socketio-plugin": [
         "libs/socketio-plugin/src/index.ts"
       ],
-      "@ngx-starter-kit/tree": [
+      "@coord-angular/tree": [
         "libs/tree/src/index.ts"
       ],
-      "@ngx-starter-kit/home": [
+      "@coord-angular/home": [
         "libs/home/src/index.ts"
       ],
-      "@ngx-starter-kit/dashboard": [
+      "@coord-angular/dashboard": [
         "libs/dashboard/src/index.ts"
       ],
-      "@ngx-starter-kit/not-found": [
+      "@coord-angular/not-found": [
         "libs/not-found/src/index.ts"
       ],
-      "@ngx-starter-kit/experiments": [
+      "@coord-angular/experiments": [
         "libs/experiments/src/index.ts"
       ],
-      "@ngx-starter-kit/widgets": [
+      "@coord-angular/widgets": [
         "libs/widgets/src/index.ts"
       ],
-      "@ngx-starter-kit/material": [
+      "@coord-angular/material": [
         "libs/material/src/index.ts"
       ],
-      "@ngx-starter-kit/animations": [
+      "@coord-angular/animations": [
         "libs/animations/src/index.ts"
       ],
-      "@ngx-starter-kit/utils": [
+      "@coord-angular/utils": [
         "libs/utils/src/index.ts"
       ],
-      "@ngx-starter-kit/auth": [
+      "@coord-angular/auth": [
         "libs/auth/src/index.ts"
       ],
-      "@ngx-starter-kit/shared": [
+      "@coord-angular/shared": [
         "libs/shared/src/index.ts"
       ],
-      "@ngx-starter-kit/app-confirm": [
+      "@coord-angular/app-confirm": [
         "libs/app-confirm/src/index.ts"
       ],
-      "@ngx-starter-kit/draggable": [
+      "@coord-angular/draggable": [
         "libs/draggable/src/index.ts"
       ],
-      "@ngx-starter-kit/breadcrumbs": [
+      "@coord-angular/breadcrumbs": [
         "libs/breadcrumbs/src/index.ts"
       ],
-      "@ngx-starter-kit/scroll-to-top": [
+      "@coord-angular/scroll-to-top": [
         "libs/scroll-to-top/src/index.ts"
       ],
-      "@ngx-starter-kit/scrollbar": [
+      "@coord-angular/scrollbar": [
         "libs/scrollbar/src/index.ts"
       ],
-      "@ngx-starter-kit/context-menu": [
+      "@coord-angular/context-menu": [
         "libs/context-menu/src/index.ts"
       ],
-      "@ngx-starter-kit/theme-picker": [
+      "@coord-angular/theme-picker": [
         "libs/theme-picker/src/index.ts"
       ],
-      "@ngx-starter-kit/quickpanel": [
+      "@coord-angular/quickpanel": [
         "libs/quickpanel/src/index.ts"
       ],
-      "@ngx-starter-kit/ngx-pipes": [
+      "@coord-angular/ngx-pipes": [
         "libs/ngx-pipes/src/index.ts"
       ],
-      "@ngx-starter-kit/svg-viewer": [
+      "@coord-angular/svg-viewer": [
         "libs/svg-viewer/src/index.ts"
       ],
-      "@ngx-starter-kit/led": [
+      "@coord-angular/led": [
         "libs/led/src/index.ts"
       ],
-      "@ngx-starter-kit/chat-bot": [
+      "@coord-angular/chat-bot": [
         "libs/chat-bot/src/index.ts"
       ],
-      "@ngx-starter-kit/json-diff": [
+      "@coord-angular/json-diff": [
         "libs/json-diff/src/index.ts"
       ],
-      "@ngx-starter-kit/toolbar": [
+      "@coord-angular/toolbar": [
         "libs/toolbar/src/index.ts"
       ],
-      "@ngx-starter-kit/sidenav": [
+      "@coord-angular/sidenav": [
         "libs/sidenav/src/index.ts"
       ],
-      "@ngx-starter-kit/loading-overlay": [
+      "@coord-angular/loading-overlay": [
         "libs/loading-overlay/src/index.ts"
       ],
-      "@ngx-starter-kit/grid": [
+      "@coord-angular/grid": [
         "libs/grid/src/index.ts"
       ],
       "gridmap/*": [
         "dist/gridmap/*"
       ],
-      "@ngx-starter-kit/gridmap": [
+      "@coord-angular/gridmap": [
         "libs/gridmap/src/index.ts"
       ],
       "notifications/*": [
         "dist/notifications/*"
       ],
-      "@ngx-starter-kit/notifications": [
+      "@coord-angular/notifications": [
         "libs/notifications/src/index.ts"
       ]
     }

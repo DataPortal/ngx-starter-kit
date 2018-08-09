@@ -1,7 +1,7 @@
 FROM node:10
 
 LABEL maintainer="Sumanth <xmlking@gmail.com>" \
-      description="ngx-starter-kit api"
+      description="coord-angular api"
 
 # App root
 # /app

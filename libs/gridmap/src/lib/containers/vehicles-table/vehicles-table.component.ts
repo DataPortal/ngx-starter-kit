@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 import { Vehicle, Address, Gender } from '../../models/vehicle.model';
 import { VehicleService } from '../../services/vehicle.service';
-import { EntitiesComponent, EntityColumnDef } from '@ngx-starter-kit/shared';
-import { AppConfirmService } from '@ngx-starter-kit/app-confirm';
+import { EntitiesComponent, EntityColumnDef } from '@coord-angular/shared';
+import { AppConfirmService } from '@coord-angular/app-confirm';
 import { MatDialog, MatSnackBar } from '@angular/material';
 import { catchError, tap, concatMap, filter, map, mergeMap } from 'rxjs/operators';
 import { throwError } from 'rxjs';

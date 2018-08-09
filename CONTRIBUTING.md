@@ -40,7 +40,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
     git push origin my-fix-branch
     ```
 
-* In GitHub, send a pull request to `ngx-starter-kit:master`.
+* In GitHub, send a pull request to `coord-angular:master`.
 * If we suggest changes then:
   * Make the required updates.
   * Re-run the Angular CLI test suites to ensure tests are still passing.
@@ -145,9 +145,9 @@ The version in our package.json gets copied to the one we publish, and users nee
 ```
 
 
-[GitHub]: https://github.com/xmlking/ngx-starter-kit
-[gitter]: https://gitter.im/xmlking/ngx-starter-kit
-[issues]: https://github.com/xmlking/ngx-starter-kit/issues
-[pulls]: https://github.com/xmlking/ngx-starter-kit/pulls
+[GitHub]: https://github.com/xmlking/coord-angular
+[gitter]: https://gitter.im/xmlking/coord-angular
+[issues]: https://github.com/xmlking/coord-angular/issues
+[pulls]: https://github.com/xmlking/coord-angular/pulls
 
 [js-style-guide]: https://google.github.io/styleguide/jsguide.html

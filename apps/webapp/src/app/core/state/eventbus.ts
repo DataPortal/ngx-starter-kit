@@ -6,14 +6,14 @@ import {
   Store,
 } from '@ngxs/store';
 import { Injectable } from '@angular/core';
-import { Login } from '@ngx-starter-kit/auth';
+import { Login } from '@coord-angular/auth';
 import {
   ConnectWebSocket,
   DisconnectWebSocket,
   WebSocketDisconnected,
   WebSocketConnected,
   AuthenticateWebSocket,
-} from '@ngx-starter-kit/socketio-plugin';
+} from '@coord-angular/socketio-plugin';
 
 @Injectable({
   providedIn: 'root',

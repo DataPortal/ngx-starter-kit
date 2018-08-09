@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { environment as env } from '@env/environment';
-import { ROUTE_ANIMATIONS_ELEMENTS } from '@ngx-starter-kit/animations';
+import { ROUTE_ANIMATIONS_ELEMENTS } from '@coord-angular/animations';
 
 @Component({
   selector: 'ngx-features',

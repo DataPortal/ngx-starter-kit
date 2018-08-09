@@ -3,7 +3,7 @@ kind: Template
 metadata:
   name: ${APPNAME}
   annotations:
-    tags: "ngx-starter-kit-api,mongodb,template"
+    tags: "coord-angular-api,mongodb,template"
     description: ngx-starter-ki api template
 
 objects:
@@ -84,6 +84,6 @@ objects:
 
 parameters:
 - name: APPNAME
-  value: ngx-starter-kit-api
+  value: coord-angular-api
 - name: DOCKERIMAGE
-  value: xmlking/ngx-starter-kit-api:latest
+  value: xmlking/coord-angular-api:latest

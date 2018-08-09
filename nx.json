@@ -1,5 +1,5 @@
 {
-  "npmScope": "ngx-starter-kit",
+  "npmScope": "coord-angular",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",

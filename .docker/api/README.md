@@ -1,16 +1,16 @@
 API
 ===
-Deploying ngx-starter-kit API
+Deploying coord-angular API
 
 ### Build
 ```bash
 # build app docker image
-docker build --tag=ngx-starter-kit-api -f .docker/api/prod.dockerfile . 
+docker build --tag=coord-angular-api -f .docker/api/prod.dockerfile . 
 ```
 
 ### Run
 ```bash
-docker run -it --env TYPEORM_HOST=localhost -p 3000:3000  ngx-starter-kit-api
+docker run -it --env TYPEORM_HOST=localhost -p 3000:3000  coord-angular-api
 ```
 
 ### Test
@@ -33,37 +33,37 @@ curl -v -X GET \
 docker login
 
 # tag
-docker tag ngx-starter-kit-api xmlking/ngx-starter-kit-api:0.1.4-SNAPSHOT
-docker tag xmlking/ngx-starter-kit-api:0.1.4-SNAPSHOT  xmlking/ngx-starter-kit-api:latest
+docker tag coord-angular-api xmlking/coord-angular-api:0.1.4-SNAPSHOT
+docker tag xmlking/coord-angular-api:0.1.4-SNAPSHOT  xmlking/coord-angular-api:latest
 
 # push
-docker push xmlking/ngx-starter-kit-api:0.1.4-SNAPSHOT
-docker push xmlking/ngx-starter-kit-api:latest
+docker push xmlking/coord-angular-api:0.1.4-SNAPSHOT
+docker push xmlking/coord-angular-api:latest
 ```
 
 #### OpenShift Deployment
-> Deploy ngx-starter-kit-api to OpenShift
+> Deploy coord-angular-api to OpenShift
 
 ```bash
 # login
 oc login <my OpenShift URL>
 # oc login  https://console.starter-us-west-1.openshift.com
-oc project ngx-starter-kit
+oc project coord-angular
 cd .docker/api
 
 # create app (first time deployment)
-oc new-app -f api.tmpl.yml -p APPNAME=ngx-starter-kit-api -n ngx-starter-kit
+oc new-app -f api.tmpl.yml -p APPNAME=coord-angular-api -n coord-angular
 
 # follow next steps if you want completely delete and deploy.
 # delete only deploymentConfig
-oc delete all -l app=ngx-starter-kit-api -n ngx-starter-kit
+oc delete all -l app=coord-angular-api -n coord-angular
 
 # delete fully
-oc delete all,configmap,secret -l app=ngx-starter-kit-api -n ngx-starter-kit
+oc delete all,configmap,secret -l app=coord-angular-api -n coord-angular
 
 # redeploy
 # From OpenShift Console UI
-Applications > Deployments > ngx-starter-kit > Deploy 
+Applications > Deployments > coord-angular > Deploy 
 ```
  
 

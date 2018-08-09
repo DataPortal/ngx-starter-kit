@@ -4,7 +4,7 @@ import { BehaviorSubject, Subscription } from 'rxjs';
 
 import { VehicleService } from '../../services/vehicle.service';
 import { Vehicle } from '../../models/vehicle.model';
-import { fadeAnimation } from '@ngx-starter-kit/animations';
+import { fadeAnimation } from '@coord-angular/animations';
 
 @Component({
   selector: 'ngx-vehicle-detail',

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { SharedModule } from '@ngx-starter-kit/shared';
-import { AppConfirmModule } from '@ngx-starter-kit/app-confirm';
-import { DraggableModule } from '@ngx-starter-kit/draggable';
-import { NgxPipesModule } from '@ngx-starter-kit/ngx-pipes';
+import { SharedModule } from '@coord-angular/shared';
+import { AppConfirmModule } from '@coord-angular/app-confirm';
+import { DraggableModule } from '@coord-angular/draggable';
+import { NgxPipesModule } from '@coord-angular/ngx-pipes';
 import { VehiclesGridListComponent } from './containers/vehicles-grid-list/vehicles-grid-list.component';
 import { VehiclesTableComponent } from './containers/vehicles-table/vehicles-table.component';
 import { VehicleService } from './services/vehicle.service';

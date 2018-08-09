@@ -24,22 +24,22 @@ docker push xmlking/keycloak-openshift-stateless:latest
 # login with your ID
 oc login <my OpenShift URL>
 # oc login  https://console.starter-us-west-1.openshift.com
-oc project ngx-starter-kit
+oc project coord-angular
 cd .docker/keycloak
 
 # create app (first time deployment)
-oc new-app -f keycloak.tmpl.yml -p APPNAME=keycloak -n ngx-starter-kit
+oc new-app -f keycloak.tmpl.yml -p APPNAME=keycloak -n coord-angular
 
 # follow next steps if you want completely delete and deploy.
 # delete only deploymentConfig
-oc delete all -l app=keycloak -n ngx-starter-kit
+oc delete all -l app=keycloak -n coord-angular
 
 # delete fully
-oc delete all,configmap,secret -l app=keycloak -n ngx-starter-kit
+oc delete all,configmap,secret -l app=keycloak -n coord-angular
 
 # redeploy
 From OpenShift Console UI
-Applications > Deployments > ngx-starter-kit > Deploy 
+Applications > Deployments > coord-angular > Deploy 
 ```
 
 #### Envelopment Variables
@@ -59,7 +59,7 @@ oc rsh <keycloak-pod-name>
 # in the shell , run
 /bin/sh /opt/jboss/keycloak/bin/standalone.sh -Dkeycloak.migration.realmName=kubernetes -Dkeycloak.migration.action=export -Dkeycloak.migration.provider=dir  -Dkeycloak.migration.dir=/tmp/sumo
 # copy files back to codebase
-oc rsync <pod-name>:/tmp/sumo  /Developer/Work/SPA/ngx-starter-kit/.docker/keycloak
+oc rsync <pod-name>:/tmp/sumo  /Developer/Work/SPA/coord-angular/.docker/keycloak
 ```
 
 ### Reference 

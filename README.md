@@ -2,14 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) using [Nrwl Nx](https://nrwl.io/nx).
 
-live [Demo](https://xmlking.github.io/ngx-starter-kit/index.html)
+live [Demo](https://xmlking.github.io/coord-angular/index.html)
 
 **MANT** (MongoDB Angular NestJS TypeScript) Stack
 
 ## Install
 
 ```bash
-git clone https://github.com/xmlking/ngx-starter-kit.git my-project
+git clone https://github.com/xmlking/coord-angular.git my-project
 cd my-project
 npm install
 ```

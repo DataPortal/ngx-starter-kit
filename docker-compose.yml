@@ -31,7 +31,7 @@ services:
     build:
       context: .
       dockerfile: .docker/api/dev.dockerfile
-    image: 'ngx-starter-kit-api:latest'
+    image: 'coord-angular-api:latest'
     container_name: api
     env_file:
       - development.env
@@ -43,7 +43,7 @@ services:
     build:
       context: .
       dockerfile: .docker/webapp/prod.dockerfile
-    image: ngx-starter-kit:latest
+    image: coord-angular:latest
     container_name: web
     command: nginx -g 'daemon off;'
     volumes:

@@ -3,8 +3,8 @@ kind: Template
 metadata:
   name: ${APPNAME}
   annotations:
-    tags: "ngx-starter-kit, webapp, template"
-    description: ngx-starter-kit webapp template
+    tags: "coord-angular, webapp, template"
+    description: coord-angular webapp template
 
 objects:
 - kind: ConfigMap
@@ -91,4 +91,4 @@ parameters:
 - name: APPNAME
   value: webapp
 - name: DOCKERIMAGE
-  value: xmlking/ngx-starter-kit:latest
+  value: xmlking/coord-angular:latest

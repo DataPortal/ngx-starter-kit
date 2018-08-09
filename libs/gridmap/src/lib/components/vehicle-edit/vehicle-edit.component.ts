@@ -6,7 +6,7 @@ import { map, startWith } from 'rxjs/operators';
 import { Vehicle } from '../../models/vehicle.model';
 import { states } from './states';
 import { Observable } from 'rxjs';
-import { EntityFormComponent } from '@ngx-starter-kit/shared';
+import { EntityFormComponent } from '@coord-angular/shared';
 import * as moment from 'moment';
 
 @Component({

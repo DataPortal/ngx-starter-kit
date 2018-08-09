@@ -15,22 +15,22 @@ Deploying MongoDB on OpenShift Origin
 # login with ms id
 oc login <my OpenShift URL>
 # oc login  https://console.starter-us-west-1.openshift.com
-oc project ngx-starter-kit
+oc project coord-angular
 cd .docker/mongodb
 
 # create app (first time deployment)
-oc new-app -f mongodb.tmpl.yml -p APPNAME=mongodb -n ngx-starter-kit
+oc new-app -f mongodb.tmpl.yml -p APPNAME=mongodb -n coord-angular
 
 # follow next steps if you want completely delete and deploy.
 # delete only deploymentConfig
-oc delete all -l app=mongodb -n ngx-starter-kit
+oc delete all -l app=mongodb -n coord-angular
 
 # delete fully
-oc delete all,configmap,secret -l app=mongodb -n ngx-starter-kit
+oc delete all,configmap,secret -l app=mongodb -n coord-angular
 
 # redeploy
 From OpenShift Console UI
-Applications > Deployments > ngx-starter-kit > Deploy 
+Applications > Deployments > coord-angular > Deploy 
 ```
 
 ### Use
@@ -69,7 +69,7 @@ Then test connection
  
 ```bash
 # get pod name
-oc get pods -n ngx-starter-kit
+oc get pods -n coord-angular
 # ssh to pod
 oc rsh  mongodb-1-zkgrw  
 # or port forward

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Crumb } from '@ngx-starter-kit/breadcrumbs';
+import { Crumb } from '@coord-angular/breadcrumbs';
 import { List } from 'immutable';
 
 @Component({

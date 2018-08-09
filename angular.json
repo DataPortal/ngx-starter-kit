@@ -114,7 +114,7 @@
                   "with": "apps/webapp/src/environments/environment.mock.ts"
                 }
               ],
-              "baseHref": "/ngx-starter-kit/",
+              "baseHref": "/coord-angular/",
               "optimization": true,
               "outputHashing": "media",
               "sourceMap": false,

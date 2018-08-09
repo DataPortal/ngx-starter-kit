@@ -18,45 +18,45 @@ docker push xmlking/openshift-nginx:latest
 ```
 
 #### Build App
-> Build ngx-starter-kit docker image
+> Build coord-angular docker image
 ```bash
 # build app docker image
-docker build --tag=ngx-starter-kit -f .docker/webapp/prod.dockerfile . 
+docker build --tag=coord-angular -f .docker/webapp/prod.dockerfile . 
 ```
 
 #### Docker Push
-> Push ngx-starter-kit docker image
+> Push coord-angular docker image
 ```bash
 # login to hub.docker.com to push docker image
 docker login
 
 # tag  
-docker tag ngx-starter-kit xmlking/ngx-starter-kit:1.0.0-SNAPSHOT
-docker tag xmlking/ngx-starter-kit:1.0.0-SNAPSHOT  xmlking/ngx-starter-kit:latest
+docker tag coord-angular xmlking/coord-angular:1.0.0-SNAPSHOT
+docker tag xmlking/coord-angular:1.0.0-SNAPSHOT  xmlking/coord-angular:latest
 
 # push
-docker push xmlking/ngx-starter-kit:1.0.0-SNAPSHOT
-docker push xmlking/ngx-starter-kit:latest
+docker push xmlking/coord-angular:1.0.0-SNAPSHOT
+docker push xmlking/coord-angular:latest
 ```
 
 #### OpenShift Deployment
-> Deploy ngx-starter-kit app to OpenShift
+> Deploy coord-angular app to OpenShift
 ```bash
 # login with your ID
 oc login <my OpenShift URL>
 # oc login  https://console.starter-us-west-1.openshift.com
-oc project ngx-starter-kit
+oc project coord-angular
 cd .docker/webapp
 
 # create app (first time deployment)
-oc new-app -f webapp.tmpl.yml -p APPNAME=webapp -n ngx-starter-kit
+oc new-app -f webapp.tmpl.yml -p APPNAME=webapp -n coord-angular
 
 # follow next steps if you want completely delete and deploy.
 # delete only deploymentConfig
 oc delete all -l app=webapp -n cockpit
 
 # delete fully
-oc delete all,configmap,secret -l app=webapp -n ngx-starter-kit
+oc delete all,configmap,secret -l app=webapp -n coord-angular
 
 # redeploy
 from OpenShift Console UI, 
