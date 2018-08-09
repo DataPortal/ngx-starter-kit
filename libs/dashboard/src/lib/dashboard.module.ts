@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { SharedModule } from '@ngx-starter-kit/shared';
+import { SharedModule } from '@coord-angular/shared';
 
-import { AuthGuard } from '@ngx-starter-kit/auth';
-import { ChatBotModule } from '@ngx-starter-kit/chat-bot';
+import { AuthGuard } from '@coord-angular/auth';
+import { ChatBotModule } from '@coord-angular/chat-bot';
 
 import { DashboardLayoutComponent } from './containers/dashboard-layout/dashboard-layout.component';
 import { OverviewComponent } from './containers/overview/overview.component';
 import { RainbowComponent } from './components/rainbow/rainbow.component';
-import { QuickpanelModule } from '@ngx-starter-kit/quickpanel';
-import { ToolbarModule } from '@ngx-starter-kit/toolbar';
-import { SidenavModule } from '@ngx-starter-kit/sidenav';
+import { QuickpanelModule } from '@coord-angular/quickpanel';
+import { ToolbarModule } from '@coord-angular/toolbar';
+import { SidenavModule } from '@coord-angular/sidenav';
 
 @NgModule({
   imports: [
@@ -34,22 +34,22 @@ import { SidenavModule } from '@ngx-starter-kit/sidenav';
           },
           {
             path: '',
-            loadChildren: '@ngx-starter-kit/widgets#WidgetsModule',
+            loadChildren: '@coord-angular/widgets#WidgetsModule',
             data: { animation: 'overview' }
           },
           {
             path: 'grid',
-            loadChildren: '@ngx-starter-kit/grid#GridModule',
+            loadChildren: '@coord-angular/grid#GridModule',
             data: { animation: 'grid' }
           },
           {
             path: 'gridmap',
-            loadChildren: '@ngx-starter-kit/gridmap#GridMapModule',
-            data: { animation: 'grid' }
+            loadChildren: '@coord-angular/gridmap#GridMapModule',
+            data: { animation: 'gridmap' }
           },
           {
             path: 'experiments',
-            loadChildren: '@ngx-starter-kit/experiments#ExperimentsModule',
+            loadChildren: '@coord-angular/experiments#ExperimentsModule',
             data: { animation: 'experiments' }
           }
         ]
