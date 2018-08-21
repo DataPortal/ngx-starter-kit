@@ -4,14 +4,9 @@ import { FilePondModule, registerPlugin } from 'ngx-filepond';
 import { ScrollingModule } from '@angular/cdk-experimental/scrolling';
 import { KnobModule } from '@xmlking/ngx-knob';
 
-<<<<<<< HEAD
-import { SharedModule } from '@coord-angular/shared';
-import { ContextMenuModule } from '@coord-angular/context-menu';
-=======
 import { ClapModule } from '@coord-angular/clap';
 import { SharedModule } from '@coord-angular/shared';
 import { ContextMenuModule } from '@coord-angular/context-menu';
->>>>>>> upstream/master
 import { AnimationsComponent } from './containers/animations/animations.component';
 import { FileUploadComponent } from './containers/file-upload/file-upload.component';
 import { HammertimeDirective } from './components/hammertime/hammertime.directive';

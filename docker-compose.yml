@@ -30,13 +30,8 @@ services:
   api:
     build:
       context: .
-<<<<<<< HEAD
-      dockerfile: .docker/api/dev.dockerfile
-    image: 'coord-angular-api:latest'
-=======
       dockerfile: .deploy/api/dev.dockerfile
     image: 'coord-angular-api:latest'
->>>>>>> upstream/master
     container_name: api
     env_file:
       - development.env
@@ -47,13 +42,8 @@ services:
   web:
     build:
       context: .
-<<<<<<< HEAD
-      dockerfile: .docker/webapp/prod.dockerfile
-    image: coord-angular:latest
-=======
       dockerfile: .deploy/webapp/prod.dockerfile
     image: coord-angular:latest
->>>>>>> upstream/master
     container_name: web
     command: nginx -g 'daemon off;'
     volumes:

@@ -21,11 +21,7 @@ docker push xmlking/openshift-nginx:latest
 > Build coord-angular docker image
 ```bash
 # build app docker image
-<<<<<<< HEAD:.docker/webapp/README.md
-docker build --tag=coord-angular -f .docker/webapp/prod.dockerfile . 
-=======
 docker build --tag=coord-angular -f .deploy/webapp/prod.dockerfile . 
->>>>>>> upstream/master:.deploy/webapp/README.md
 ```
 
 #### Docker Push
@@ -49,13 +45,8 @@ docker push xmlking/coord-angular:latest
 # login with your ID
 oc login <my OpenShift URL>
 # oc login  https://console.starter-us-west-1.openshift.com
-<<<<<<< HEAD:.docker/webapp/README.md
-oc project coord-angular
-cd .docker/webapp
-=======
 oc project coord-angular
 cd .deploy/webapp
->>>>>>> upstream/master:.deploy/webapp/README.md
 
 # create app (first time deployment)
 oc new-app -f webapp.tmpl.yml -p APPNAME=webapp -n coord-angular
