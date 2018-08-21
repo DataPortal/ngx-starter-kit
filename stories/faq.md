@@ -2,6 +2,11 @@ HOW TO
 ======
 
 
+* What is new in Angular 6.1?
+
+> Refer [here](https://blog.ninja-squad.com/2018/07/26/what-is-new-angular-6.1/)
+> Refer [here](https://blog.ninja-squad.com/2018/07/27/angular-cli-6.1/)
+
 * How do I use this template projects?
 > Add your own app along with `default` app and use shared modules in `libs`. 
 once you are conferable , then you can delete demo `default` app
@@ -39,11 +44,25 @@ once you are conferable , then you can delete demo `default` app
 * Here can I learn Nx Workspace/monoreops? 
 > Refer [here](http://blog.ng-book.com/getting-started-with-nx-the-nrwl-extensions-for-angular/)
 > Refer [here](https://www.youtube.com/watch?v=0N589xX2ZQw)
+> Refer [here](https://github.com/nrwl/nx-examples)
 
 * internationalization ?
 > i18n coming soon
 
-How to manage state in the front-end?
+* Component-Driven Development (CDD)
+> Read [CDD](https://www.learnstorybook.com/angular/en/get-started/)
+
+*  Creating Reusable Animations in Angular 
+> Read [Reusable Animations](https://netbasal.com/creating-reusable-animations-in-angular-6a2350d6191a)
+
+*  Micro-Interactions
+> Read [medium-clap](https://medium.com/@yonatandoron/how-i-implemented-the-medium-clap-from-scratch-4a16ac90ad3b)
+> Read [Must-have animations for Chatbots](https://uxdesign.cc/must-have-animations-for-chatbots-15c031fd6bd3)
+
+*  Why I Prefer NGXS over NGRX 
+> Read [NGXS vs NGRX](https://blog.singular.uk/why-i-prefer-ngxs-over-ngrx-df727cd868b5?gi=405262c5a9c5)
+
+*  How to manage state in the front-end?
 
 > use [NGXS](https://amcdnl.gitbooks.io/ngxs/)
 > Read [Immer with NGXS](https://blog.angularindepth.com/simple-state-mutations-in-ngxs-with-immer-48b908874a5e)

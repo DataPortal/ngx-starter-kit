@@ -2,13 +2,22 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FilePondModule, registerPlugin } from 'ngx-filepond';
 import { ScrollingModule } from '@angular/cdk-experimental/scrolling';
+import { KnobModule } from '@xmlking/ngx-knob';
 
+<<<<<<< HEAD
 import { SharedModule } from '@coord-angular/shared';
 import { ContextMenuModule } from '@coord-angular/context-menu';
+=======
+import { ClapModule } from '@coord-angular/clap';
+import { SharedModule } from '@coord-angular/shared';
+import { ContextMenuModule } from '@coord-angular/context-menu';
+>>>>>>> upstream/master
 import { AnimationsComponent } from './containers/animations/animations.component';
 import { FileUploadComponent } from './containers/file-upload/file-upload.component';
 import { HammertimeDirective } from './components/hammertime/hammertime.directive';
 import { ContextMenuComponent } from './containers/context-menu/context-menu.component';
+import { ClapButtonComponent } from './containers/clap-button/clap-button.component';
+import { KnobDemoComponent } from './containers/knob-demo/knob-demo.component';
 
 
 // Registering plugins
@@ -26,35 +35,47 @@ registerPlugin(FilePondPluginFileValidateType, FilepondPluginFileValidateSize, F
     FilePondModule,
     ContextMenuModule,
     ScrollingModule,
+    ClapModule,
+    KnobModule,
     RouterModule.forChild([
       /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
       { path: '', redirectTo: 'animations', pathMatch: 'full', data: { animation: 'experiments' } },
       {
         path: 'animations',
         component: AnimationsComponent,
-        data: { animations: 'animations' }
+        data: { animations: 'animations' },
       },
       {
         path: 'file-upload',
         component: FileUploadComponent,
-        data: { animation: 'file-upload' }
+        data: { animation: 'file-upload' },
       },
       {
         path: 'context-menu',
         component: ContextMenuComponent,
-        data: { animation: 'context-menu' }
+        data: { animation: 'context-menu' },
       },
       {
         path: 'virtual-scroll',
         component: VirtualScrollComponent,
-        data: { animation: 'virtual-scroll' }
+        data: { animation: 'virtual-scroll' },
       },
       {
         path: 'table',
         component: StickyTableComponent,
-        data: { animation: 'sticky-table' }
-      }
-    ])
+        data: { animation: 'sticky-table' },
+      },
+      {
+        path: 'clap',
+        component: ClapButtonComponent,
+        data: { animation: 'clap' },
+      },
+      {
+        path: 'knob',
+        component: KnobDemoComponent,
+        data: { animation: 'Knob' },
+      },
+    ]),
   ],
   declarations: [
     AnimationsComponent,
@@ -62,7 +83,9 @@ registerPlugin(FilePondPluginFileValidateType, FilepondPluginFileValidateSize, F
     HammertimeDirective,
     ContextMenuComponent,
     VirtualScrollComponent,
-    StickyTableComponent
-  ]
+    StickyTableComponent,
+    ClapButtonComponent,
+    KnobDemoComponent,
+  ],
 })
 export class ExperimentsModule {}

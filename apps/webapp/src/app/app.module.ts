@@ -6,7 +6,7 @@ import {AppComponent} from './app.component';
 import { PreloadAllModules, RouterModule } from '@angular/router';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {CoreModule} from './core/core.module';
+import { CoreModule } from '@coord-angular/core';
 
 import {environment} from '@env/environment';
 
@@ -32,13 +32,15 @@ export class MyHammerConfig extends HammerGestureConfig {
         {path: '**', redirectTo: '404', pathMatch: 'full'}
       ],
       {
+        scrollPositionRestoration: 'enabled',
+        anchorScrolling: 'enabled',
         initialNavigation: 'enabled',
         preloadingStrategy: PreloadAllModules,
         paramsInheritanceStrategy: 'always'
         // onSameUrlNavigation: 'reload'
       }
     ),
-    ServiceWorkerModule.register('./ngsw-worker.js', {enabled: environment.production}),
+    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
     CoreModule, // IMP: Please keep CoreModule after RouterModule
   ],
   providers: [

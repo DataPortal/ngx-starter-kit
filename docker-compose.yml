@@ -4,7 +4,7 @@ services:
     image: xmlking/keycloak-openshift-stateless
     container_name: keycloak
     volumes:
-    - $PWD/.docker/keycloak/realm-config:/opt/jboss/keycloak/realm-config
+    - $PWD/.deploy/keycloak/realm-config:/opt/jboss/keycloak/realm-config
     environment:
       KEYCLOAK_USER: admin
       KEYCLOAK_PASSWORD: admin123
@@ -30,8 +30,13 @@ services:
   api:
     build:
       context: .
+<<<<<<< HEAD
       dockerfile: .docker/api/dev.dockerfile
     image: 'coord-angular-api:latest'
+=======
+      dockerfile: .deploy/api/dev.dockerfile
+    image: 'coord-angular-api:latest'
+>>>>>>> upstream/master
     container_name: api
     env_file:
       - development.env
@@ -42,12 +47,17 @@ services:
   web:
     build:
       context: .
+<<<<<<< HEAD
       dockerfile: .docker/webapp/prod.dockerfile
     image: coord-angular:latest
+=======
+      dockerfile: .deploy/webapp/prod.dockerfile
+    image: coord-angular:latest
+>>>>>>> upstream/master
     container_name: web
     command: nginx -g 'daemon off;'
     volumes:
-    - .docker/webapp/nginx.dev.conf:/etc/nginx/conf.d/nginx.conf:ro
+    - .deploy/webapp/nginx.dev.conf:/etc/nginx/conf.d/nginx.conf:ro
     ports:
     - 4200:8080
     depends_on:

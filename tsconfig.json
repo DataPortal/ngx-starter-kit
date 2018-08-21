@@ -1,8 +1,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
+    "module": "es2015",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -14,18 +17,24 @@
       "es2017",
       "dom"
     ],
-    "baseUrl": ".",
     "paths": {
       "@coord-angular/*": [
         "libs/*"
       ],
-      "@default/*": [
-        "apps/webapp/src/app/*"
-      ],
       "@env/*": [
         "apps/webapp/src/environments/*"
       ],
+<<<<<<< HEAD
       "@coord-angular/navigator": [
+=======
+      "@coord-angular/core": [
+        "libs/core/src/index.ts"
+      ],
+      "@coord-angular/shared": [
+        "libs/shared/src/index.ts"
+      ],
+      "@coord-angular/navigator": [
+>>>>>>> upstream/master
         "libs/navigator/src/index.ts"
       ],
       "@coord-angular/socketio-plugin": [
@@ -61,10 +70,14 @@
       "@coord-angular/auth": [
         "libs/auth/src/index.ts"
       ],
+<<<<<<< HEAD
       "@coord-angular/shared": [
         "libs/shared/src/index.ts"
       ],
       "@coord-angular/app-confirm": [
+=======
+      "@coord-angular/app-confirm": [
+>>>>>>> upstream/master
         "libs/app-confirm/src/index.ts"
       ],
       "@coord-angular/draggable": [
@@ -97,8 +110,13 @@
       "@coord-angular/led": [
         "libs/led/src/index.ts"
       ],
+<<<<<<< HEAD
       "@coord-angular/chat-bot": [
         "libs/chat-bot/src/index.ts"
+=======
+      "@coord-angular/chat-box": [
+        "libs/chat-box/src/index.ts"
+>>>>>>> upstream/master
       ],
       "@coord-angular/json-diff": [
         "libs/json-diff/src/index.ts"
@@ -126,6 +144,9 @@
       ],
       "@coord-angular/notifications": [
         "libs/notifications/src/index.ts"
+      ],
+      "@coord-angular/clap": [
+        "libs/clap/src/index.ts"
       ]
     }
   },

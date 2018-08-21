@@ -140,7 +140,7 @@
         "public-module"
       ]
     },
-    "chat-bot": {
+    "chat-box": {
       "tags": [
         "public-module"
       ]
@@ -176,6 +176,16 @@
       ]
     },
     "notifications": {
+      "tags": [
+        "public-module"
+      ]
+    },
+    "core": {
+      "tags": [
+        "core-module"
+      ]
+    },
+    "clap": {
       "tags": [
         "public-module"
       ]

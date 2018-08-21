@@ -196,6 +196,11 @@
           "options": {
             "protractorConfig": "apps/webapp-e2e/protractor.conf.js",
             "devServerTarget": "webapp:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "webapp:serve:production"
+            }
           }
         },
         "lint": {
@@ -1025,38 +1030,38 @@
         }
       }
     },
-    "chat-bot": {
-      "root": "libs/chat-bot",
-      "sourceRoot": "libs/chat-bot/src",
+    "chat-box": {
+      "root": "libs/chat-box",
+      "sourceRoot": "libs/chat-box/src",
       "projectType": "library",
       "prefix": "ngx",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "libs/chat-bot/tsconfig.lib.json",
-            "project": "libs/chat-bot/ng-package.json"
+            "tsConfig": "libs/chat-box/tsconfig.lib.json",
+            "project": "libs/chat-box/ng-package.json"
           },
           "configurations": {
             "production": {
-              "project": "libs/chat-bot/ng-package.prod.json"
+              "project": "libs/chat-box/ng-package.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/chat-bot/src/test.ts",
-            "tsConfig": "libs/chat-bot/tsconfig.spec.json",
-            "karmaConfig": "libs/chat-bot/karma.conf.js"
+            "main": "libs/chat-box/src/test.ts",
+            "tsConfig": "libs/chat-box/tsconfig.spec.json",
+            "karmaConfig": "libs/chat-box/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/chat-bot/tsconfig.lib.json",
-              "libs/chat-bot/tsconfig.spec.json"
+              "libs/chat-box/tsconfig.lib.json",
+              "libs/chat-box/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -1289,6 +1294,74 @@
             "tsConfig": [
               "libs/notifications/tsconfig.lib.json",
               "libs/notifications/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "core": {
+      "root": "libs/core",
+      "sourceRoot": "libs/core/src",
+      "projectType": "library",
+      "prefix": "ngx",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/core/src/test.ts",
+            "tsConfig": "libs/core/tsconfig.spec.json",
+            "karmaConfig": "libs/core/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/core/tsconfig.lib.json",
+              "libs/core/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "clap": {
+      "root": "libs/clap",
+      "sourceRoot": "libs/clap/src",
+      "projectType": "library",
+      "prefix": "ngx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/clap/tsconfig.lib.json",
+            "project": "libs/clap/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "libs/clap/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/clap/src/test.ts",
+            "tsConfig": "libs/clap/tsconfig.spec.json",
+            "karmaConfig": "libs/clap/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/clap/tsconfig.lib.json",
+              "libs/clap/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
