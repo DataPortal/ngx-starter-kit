@@ -39,7 +39,7 @@ export const defaultMenu: MenuItem[] = [
     disabled: false,
     children: [
       {
-        name: 'Available Vehicles',
+        name: 'Available Vehicles (RB)',
         icon: 'grid_on',
         linkX: '/dashboard/vehicles',
         link: '/dashboard/gridmap/grid-list'
